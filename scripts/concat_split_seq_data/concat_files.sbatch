@@ -10,11 +10,11 @@
 #SBATCH --output=/scratch/Users/jost9358/Dual_seq_feb_23/slurm_outs/combine_fq_%j.out # Standard output and error log
 #SBATCH --error=/scratch/Users/jost9358/Dual_seq_feb_23/slurm_outs/combine_fq_%j.err # %j inserts job number
 
-while getopts f1:f2:o: flag
+while getopts 1:2:o: flag
 do
     case "${flag}" in
-        f1) file1=${OPTARG};;
-        f2) file2=${OPTARG};;
+        1) file1=${OPTARG};;
+        2) file2=${OPTARG};;
         o) outpath=${OPTARG};;
     esac
 done
